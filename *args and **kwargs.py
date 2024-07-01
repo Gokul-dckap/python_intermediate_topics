@@ -4,7 +4,6 @@
     This is particularly useful when you don't know beforehand how many arguments might be passed.
 """
 
-
 """
 The *args Syntax
  1. *args allows a function to accept any number of positional arguments.
