@@ -16,7 +16,7 @@
 #     yield 1
 #     yield 2
 #     yield 3
-#
+
 # gen = simple_generator()
 # print(gen)
 # print(next(gen))  # Output: 1
