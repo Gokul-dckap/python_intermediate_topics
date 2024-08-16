@@ -19,21 +19,26 @@ A module in Python is a file containing Python code that defines functions, clas
 Modules are used to organize and reuse code across multiple programs or projects. 
 """
 
-import requests
-response = requests.get('https://api.github.com')
-print(response.json())
+# import requests
+# response = requests.get('https://api.github.com')
+# print(response.json())
+#
+#
+# import pyfiglet
+#
+# result = pyfiglet.figlet_format("jasmine!")
+# print(result)
+#
+#
+# from prettytable import PrettyTable
+#
+# table = PrettyTable()
+# table.field_names = ["Name", "Age", "City"]
+# table.add_row(["Alice", 30, "New York"])
+# table.add_row(["Bob", 25, "Los Angeles"])
+# print(table)
 
+from modules import MathOperation as math
 
-import pyfiglet
-
-result = pyfiglet.figlet_format("jasmine!")
-print(result)
-
-
-from prettytable import PrettyTable
-
-table = PrettyTable()
-table.field_names = ["Name", "Age", "City"]
-table.add_row(["Alice", 30, "New York"])
-table.add_row(["Bob", 25, "Los Angeles"])
-print(table)
+data = math(1,2)
+print(data.subtract())
