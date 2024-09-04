@@ -35,36 +35,36 @@
 #     raise BaseException("BaseException raised")
 # except BaseException as e:
 #     print(f"Caught: {e}")
-
+#
 # SystemExit Example
 # import sys
 # try:
 #     sys.exit("Exiting program")
 # except SystemExit as e:
 #     print(f"Caught: {e}")
-
+#
 # KeyboardInterrupt  Example
 # try:
 #     while True:
 #         pass  # Press Ctrl+C to trigger KeyboardInterrupt
 # except KeyboardInterrupt:
 #     print("Caught KeyboardInterrupt")
-
-
+#
+#
 # Exception Example (ZeroDivisionError under ArithmeticError):
 # try:
 #     result = 1 / 0
 # except ZeroDivisionError as e:
 #     print(f"Caught: {e}")
-
-
+#
+#
 # Example (KeyError under LookupError):
 # try:
 #     d = {"key": "value"}
 #     value = d["nonexistent"]
 # except KeyError as e:
 #     print(f"Caught: {e}")
-
+#
 # Custom Exception Example
 # class CustomError(Exception):
 #     pass
