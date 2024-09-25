@@ -70,6 +70,7 @@
 
 # def a_decorator(func):
 #     def wrapper(*args , **kwargs):
+#         """A wrapper function"""
 #         # Extend some capabilities of func
 #         func()
 #
@@ -86,7 +87,7 @@
 #     print("second function")
 #
 #
-# print(first_function.__name__)
+# # print(first_function.__name__)
 # # print(first_function.__doc__)
 # # print(second_function.__name__)
 # # print(second_function.__doc__)
