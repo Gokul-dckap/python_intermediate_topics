@@ -68,62 +68,25 @@
 
 # // ---------------------------------------------------------------------------------------
 
-# from flask import Flask, redirect, url_for, session, request, g
-# from functools import wraps
+# def a_decorator(func):
+#     def wrapper(*args , **kwargs):
+#         # Extend some capabilities of func
+#         func()
 #
-# app = Flask(__name__)
-# app.secret_key = 'your_secret_key'  # Needed for session management
+#     return wrapper
 #
-# # Sample user data for demonstration
-# users = {
-#     'user1': 'password1',
-#     'user2': 'password2'
-# }
 #
-# # Simulated login status
-# def is_logged_in():
-#     return 'username' in session
+# @a_decorator
+# def first_function():
+#     print("first function")
 #
-# # Login required decorator
-# def login_required(f):
-#     @wraps(f)
-#     def decorated_function(*args, **kwargs):
-#         if not is_logged_in():
-#             return redirect(url_for('login', next=request.url))
-#         return f(*args, **kwargs)
-#     return decorated_function
 #
-# @app.route('/')
-# def home():
-#     return "Welcome to the Home Page!"
+# @a_decorator
+# def second_function(a):
+#     print("second function")
 #
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     if request.method == 'POST':
-#         username = request.form['username']
-#         password = request.form['password']
-#         if username in users and users[username] == password:
-#             session['username'] = username
-#             return redirect(url_for('protected'))
-#         return "Invalid Credentials"
-#     return '''
-#         <form method="post">
-#             Username: <input type="text" name="username"><br>
-#             Password: <input type="password" name="password"><br>
-#             <input type="submit" value="Login">
-#         </form>
-#     '''
 #
-# @app.route('/protected')
-# @login_required
-# def protected():
-#     print(session)
-#     return f"Hello, {session['username']}! This is a protected page."
-#
-# @app.route('/logout')
-# def logout():
-#     session.pop('username', None)
-#     return redirect(url_for('home'))
-#
-# if __name__ == '__main__':
-#     app.run(debug=True)
+# print(first_function.__name__)
+# # print(first_function.__doc__)
+# # print(second_function.__name__)
+# # print(second_function.__doc__)
